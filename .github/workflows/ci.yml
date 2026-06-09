@@ -1,30 +1,30 @@
 name: CI
 
-   on:
-     push:
-     pull_request:
+on:
+  push:
+  pull_request:
 
-   jobs:
-     build-and-test:
-       runs-on: ubuntu-latest
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
 
-       steps:
-         - name: Descargar el codigo del repositorio
-           uses: actions/checkout@v4
+    steps:
+      - name: Descargar el codigo del repositorio
+        uses: actions/checkout@v4
 
-         - name: Instalar Python
-           uses: actions/setup-python@v5
-           with:
-             python-version: '3.11'
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-         - name: Instalar dependencias
-           run: |
-             python -m pip install --upgrade pip
-             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-             pip install pytest
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pytest
 
-         - name: Compilar (verificar sintaxis del codigo)
-           run: python -m compileall .
+      - name: Compilar (verificar sintaxis del codigo)
+        run: python -m compileall .
 
-         - name: Ejecutar unit tests
-           run: pytest
+      - name: Ejecutar unit tests
+        run: pytest
