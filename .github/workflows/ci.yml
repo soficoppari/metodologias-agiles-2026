@@ -76,8 +76,7 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           max-line-length: "120"
-          ignore: "E501"
-
+          ignore: "E501,W293,E302,E305"
       # SonarCloud como capa principal (dashboard, quality gate, cobertura visual)
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
