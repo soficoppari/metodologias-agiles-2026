@@ -8,5 +8,5 @@ Bienvenidos a nuestro repositorio para la catedra de Metodologías Ágiles para 
 ## Autores
 
 - [@Sofia Coppari](https://www.github.com/soficoppari)
-- [@Joaquín Duarte](https://www.github.com/joaquingz1)
+- [@Joaquín Gimenez](https://www.github.com/joaquingz1)
 - [@Jeronimo Alvarez](https://www.github.com/roscoe01)
